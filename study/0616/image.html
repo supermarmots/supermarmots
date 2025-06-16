@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Image Example</title>
+    </head>
+    <body>
+        <a href="#target">링크 클릭시 아래로 이동</a> <!--클릭시 아래에 있는 target id로 이동-->
+
+
+        <!-- src="이미지 위치 주소 입력(인터넷 이미지 주소로도 가능) / 150 너비값 지정" / toptarget이라는 id 선언 -->
+        <img src="https://storage.doopedia.co.kr/upload/_upload/image4/1711/27/171127021668708/171127021668708_thumb_400_w.jpg"
+        id="toptarget"
+        alt=""
+        width="150">
+
+        <a href="http://www.naver.com">예제 사이트로 이동</a> <!--클릭시 네이버로 이동-->
+        
+        <a href="file://C:\Users\yunch\Desktop\dev\projects\whobuythis\study\0616\table.html">예제 파일로 이동</a> <!--클릭시 로컬 파일로 이동-->
+        <a href="http://www.daum.net"> 
+            <img src="https://search4.kakaocdn.net/argon/320x320_85_c/C02raPJpGRg" /> <!--이미지 클릭시 Daum 사이트로 이동-->
+        </a>
+
+        <svg width="100" height="100">
+            <circle cx="50" cy="50" r="40" fill="orange" />
+        </svg>
+
+        <img src="https://storage.doopedia.co.kr/upload/_upload/image4/1711/27/171127021668708/171127021668708_thumb_400_w.jpg" usemap="#worldmap" alt=""/>
+        <map name="worldmap">   <!--이미지에 맵핑된 영역을 지정-->
+            <area shape="rect" coords="50,50,150,150" href="usa.html" alt="" /> <!--사각형 영역 지정-->
+            <area shape="circle" coords="250,250,100" href="korea.html" alt="" /> <!--원형 영역 지정-->
+        </map>
+
+        <h1 id="target">target bottom test</h1>
+        <a href="#toptarget">위로 이동</a> <!--클릭시 위에 있는 target id로 이동-->
+    </body>
+</html>
