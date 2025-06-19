@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>DOM 구조 예시</title>
+    <style>
+        h1 ~ div {
+            color: green;
+        }
+
+        h1 + img {
+            color: blue;
+        }
+        
+        img[src^="image"] {
+            background-color: pink;
+        }
+
+        input:hover {
+            background-color: red;
+        }
+        input:focus {
+            background-color: blue;
+        }
+        input:active {
+            background-color: yellow;
+        }
+
+        p:nth-child(odd) {  /*짝수만 적용 */
+            background-color: red;
+        }
+        
+        p:nth-child(even) { /*홀수만 적용 */
+            background-color: blue;;
+        }
+
+        p:first-child { /*첫번째 만 적용*/
+            background-color: pink;
+        }
+
+        p:last-child {
+            background-color: black;
+        }
+
+        p:nth-child(2n + 1) {
+            background-color: purple;
+        }
+
+        div > p:nth-child(2n + 1) > strong {
+            font-weight: bold;
+            color: orange
+        }
+    </style>
+  </head>
+
+  <body>
+    <section>
+      <h1>
+        <strong>제목 강조</strong>
+      </h1>
+      <img src="image.jpg" alt="예시 이미지" />
+      <div>
+        <p><strong>첫 번째 단락 강조</strong></p>
+        <p><strong>두 번째 단락 강조</strong></p>
+        <p><strong>세 번째 단락 강조</strong></p>
+        <p><strong>넷 번째 단락 강조</strong></p>
+        <p><strong>다섯 번째 단락 강조</strong></p>
+        <p><strong>여섯 번째 단락 강조</strong></p>
+        <input type="text">
+        <p><strong>일곱 번쨰 단락 강조</strong></p>
+      </div>
+    </section>
+  </body>
+</html>
