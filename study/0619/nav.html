@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<hmtl>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Nav</title>
+        <style>
+            header {
+                justify-content: center;
+                background-color: lightgrey;
+            }
+
+            header h1 {
+                text-align: center;
+            }
+            
+            main {
+                display: grid;
+                grid-template-columns: 30% 70%;
+                height: 600px;
+            }
+
+            nav {
+                background-color: aqua;
+                display: flex;
+                column-count: 2;
+            }
+
+            footer p {
+                position: absolute;
+                width: 100%;
+                height: 15%;
+                background-color: lightgray;
+                text-align: center;
+                font-size: 30px;
+            }
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>나의 첫 웹 페이지</h1>
+        </header>
+        
+        <main>
+            <nav>
+            <ul>
+                <li><a href="#home">home</a></li>
+                <li><a href="#intro">intro</a></li>
+                <li><a href="#contact">contact</a></li>
+                </ul>
+            </nav>
+            <article>
+                <h2>윤찬우</h2>
+                <hr/>
+                <p>안녕하세요. 웹 서비스 개발자 입니다.</p>
+            </article>
+        
+            <footer>
+                <p>&copy; reserved by YUN</p>
+            </footer>
+        </main>
+    </body>
+</hmtl>
