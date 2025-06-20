@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>가변 이미지 갤러리 만들기</title>
+        <style>
+            /* .gallery 안에 이미지들을 가변적으로 정렬합니다.
+            이미지 개수는 8개 이상, 가로 화면에서 최대 4개씩 표시되도록 합니다.
+            이미지 크기는 유동적이며, 높이는 고정(예: 150px)으로 유지합니다.
+            작은 화면에서는 한 줄에 2개, 매우 작은 화면에서는 1개만 보여지게 합니다.*/
+            .gallery {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 10px;
+            }
+
+            .gallery img {
+                width: calc(25% - 10px);
+                height: 150px;
+                object-fit: cover;
+            }
+
+            @media (max-width: 768px) {
+                .galler img {
+                    width: calc(50% - 10px);
+                }
+            }
+
+            @media (max-width: 480px) {
+                .gallery img {
+                    width: 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="gallery">
+            <img src="https://placehold.co/300x150?text=1" alt="img1">
+            <img src="https://placehold.co/300x150?text=2" alt="img2">
+            <img src="https://placehold.co/300x150?text=3" alt="img3">
+            <img src="https://placehold.co/300x150?text=4" alt="img4">
+            <img src="https://placehold.co/300x150?text=5" alt="img5">
+            <img src="https://placehold.co/300x150?text=6" alt="img6">
+            <img src="https://placehold.co/300x150?text=7" alt="img7">
+            <img src="https://placehold.co/300x150?text=8" alt="img8">
+        </div>
+    </body>
+</html>

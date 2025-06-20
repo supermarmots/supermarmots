@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>유동적인 3열 카드 그리드 만들기</title>
+        <style>
+            .grid {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+            .item {
+                flex: 1 1 calc(33.333% - 16px);
+                background-color: #f2f2f2;
+                padding: 20px;
+                text-align: center;
+                box-sizing: border-box;
+            }
+
+            @media (max-width: 768px) {
+                .item {
+                    flex: 1 1 calc(50% - 16px);
+                }
+            }
+
+            @media (max-width: 480px) {
+                .item {
+                    flex: 1 1 100%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="grid">
+            <div class="item">card1</div>
+            <div class="item">card2</div>
+            <div class="item">card3</div>
+            <div class="item">card4</div>
+            <div class="item">card5</div>
+            <div class="item">card6</div>
+
+        </div>
+    </body>
+</html>

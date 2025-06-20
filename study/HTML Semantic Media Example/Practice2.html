@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>@media Card</title>
+        <style>
+            * {
+                box-sizing: border-box;
+            }
+
+            .container {
+                display: flex;
+                flex-wrap: wrap;
+                gap: 16px;
+            }
+
+            .card {
+                background-color: #f2f2f2;
+                padding: 20px;
+                border: 1px solid #ccc;
+                width: calc(33.333% - 11px); /* 3개씩 배치 */
+                text-align: center;
+            }
+
+            @media (max-width: 768px) {
+                .card {
+                    width: calc(50% - 8px); /* 2개씩 배치 */
+                }
+            }
+
+            @media (max-width: 480px) {
+                .card {
+                    width: 100%; /* 1개씩 배치 */
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="container">
+            <div class="card">Card 1</div>
+            <div class="card">Card 2</div>
+            <div class="card">Card 3</div>
+            <div class="card">Card 4</div>
+            <div class="card">Card 5</div>
+            <div class="card">Card 6</div>
+        </div>
+    </body>
+</html>

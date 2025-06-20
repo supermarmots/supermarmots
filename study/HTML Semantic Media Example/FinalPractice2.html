@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>가변 너비 네비게이션 바 만들기</title>
+        <style>
+            /* 각각의 .nav-item은 동일한 너비를 가지며 한 줄에 배치됩니다.
+            뷰포트 너비에 따라 자동으로 크기가 줄어들되, 내부 텍스트가 줄바꿈되지 않게 합니다.
+            가운데 정렬, 배경색, hover 효과도 적용합니다. */
+            .navbar {
+                display: flex;
+                background-color: #222;
+            }
+
+            .nav-item {
+                flex: 1;
+                text-align: center;
+                padding: 15px;
+                color: white;
+                text-decoration: none;
+                white-space: nowrap;
+                transition: background-color 0.3s;
+            }
+
+            .nav-item:hover {
+                background-color: #444;
+            }
+
+        </style>
+    </head>
+    <body>
+        <nav class="navbar">
+            <a class="nav-item" href="#">홈</a>
+            <a class="nav-item" href="#">소개</a>
+            <a class="nav-item" href="#">서비스</a>
+            <a class="nav-item" href="#">문의</a>
+        </nav>
+    </body>
+</html>

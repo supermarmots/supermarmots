@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>CSS Selector</title>
+        <style>
+            .menu a {
+                color: blue;
+            }
+
+            .menu a.active {
+                font-weight: bold;
+            }
+
+            [data-role="admin"] {
+                color: red;
+            }
+
+            .container p:first-of-type {
+                background-color: grey;
+            }
+
+            .container p::first-letter {
+                text-transform: uppercase;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="menu">
+            <li><a href="#">Home</a></li>
+            <li><a href="#" class="active">About</a></li>
+            <li><a href="#">Services</a></li>
+            <li><a href="#">Contact</a></li>
+        </ul>
+
+        <p class="info" data-role="admin">관리자 전용 정보입니다.</p>
+        <p class="info" data-role="user">사용자 전용 정보입니다.</p>
+
+        <div class="container">
+            <p>첫 번째 문단입니다.</p>
+            <p>두 번째 문단입니다.</p>
+        </div>
+
+    </body>
+</html>
