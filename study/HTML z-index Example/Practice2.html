@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>메뉴 드롭다운 겹침 문제 해결</title>
+        <style>
+            nav {
+                background: #333;
+                padding: 10px;
+                color: white;
+                position: relative;
+            }
+            
+            .dropdown {
+                display: none;
+                background: white;
+                color: black;
+                position: absolute;
+                top: 40px;
+                left: 0;
+                padding: 10px;
+                z-index: 10;
+                border: 1px solid #ccc;
+            }
+            nav:hover .dropdown {
+                display: block;
+            }
+
+            .content {
+                margin-top: 80px;
+                padding: 20px;
+                background-color: lightgrey;
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            메뉴
+        <div class="dropdown">드롭다운 메뉴 내용</div>
+        </nav>
+        <div class="content">
+            본문 콘텐츠입니다. 드롭다운 메뉴가 이 위에 보이도록 해야 합니다.
+        </div>
+    </body>
+</html>

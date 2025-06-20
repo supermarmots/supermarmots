@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>박스 3개 겹치기</title>
+        <style>
+            .box {
+                width: 150px;
+                height: 150px;
+                position: absolute;
+                top: 50px;
+                left: 50px;
+            }
+            .red { background: red; z-index: 1;}
+            .blue { background: blue; top: 80px; left: 80px; z-index: 2;}
+            .green { background: green; top: 110px; left: 110px; z-index: 3;}
+        </style>
+    </head>
+    <body>
+        <div class="box red"></div>
+        <div class="box blue"></div>
+        <div class="box green"></div>
+    </body>
+</html>
