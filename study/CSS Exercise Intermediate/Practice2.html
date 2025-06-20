@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>배너 슬라이드</title>
+        <style>
+            .banner {
+                width: 100%;
+                height: 300px;
+                overflow: hidden;
+                position: relative;
+                background-color: #ddd;
+            }
+
+            .slides {
+                display: flex;
+                animation: slide 15s infinite;
+            }
+
+            .slide {
+                min-width: 100%;
+                height: 100%;
+                background-size: cover;
+                background-position: center;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                color: white;
+                font-size: 2rem;
+                position: relative;
+            }
+
+            .slide:nth-child(1) {
+                background-image: url('https://via.placeholder.com/800x300/FF5733/FFFFFF?text=Slide+1');
+            }
+
+            .slide:nth-child(2) {
+                background-image: url('https://via.placeholder.com/800x300/FF5733/FFFFFF?text=Slide+2');
+            }
+
+            .slide:nth-child(3) {
+                background-image: url('https://via.placeholder.com/800x300/FF5733/FFFFFF?text=Slide+3');
+            }
+
+            @keyframes slide {
+                0% { transform: translateX(0); }
+                -33% { transform: translateX(-100%); }
+                66% { transform: translateX(-200%); }
+                100% { transform: translateX(0); }
+            }
+        </style>
+    </head>
+    <body>
+        <div class="banner">
+            <div class="slides">
+                <div class="slide">
+                <h2>첫 번째 슬라이드</h2>
+            </div>
+            <div class="slide">
+                <h2>두 번째 슬라이드</h2>
+            </div>
+            <div class="slide">
+                <h2>세 번째 슬라이드</h2>
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

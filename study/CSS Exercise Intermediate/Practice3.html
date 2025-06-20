@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>반응형 디자인 연습</title>
+        <style>
+            body {
+                margin: 0;
+                font-family: Arial, sans-serif;
+            }
+
+            header {
+                background-color: lightblue;
+                color: white;
+            }
+
+            .main-content {
+                padding: 20px;
+                display: block;
+            }
+
+            .main-content .left, .main-content .right {
+                padding: 18px;
+                background-color: lightgray;
+                margin: 10px 0;
+            }
+
+            footer {
+                background-color: #333;
+                color: white;
+                text-align: center;
+                padding: 10px;
+                position: fixed;
+                width: 100%;
+                bottom: 0;
+            }
+
+            @media screen and (min-width: 600px) {
+                .main-content {
+                    display: flex;
+                    justify-content: space-between;
+                }
+
+                .main-content .left, .main-content .right {
+                    width: 48%;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1>반응형 웹 페이지</h1>
+        </header>
+
+        <div class="main-content">
+            <div class="left">
+                <h2>왼쪽 콘텐츠</h2>
+                <p>여기에 왼쪽 콘텐츠가 들어갑니다.</p>
+            </div>
+            <div class="right">
+                <h2>오른쪽 콘텐츠</h2>
+                <p>여기에 오른쪽 콘텐츠가 들어갑니다.</p>
+            </div>
+        </div>
+
+        <footer>
+            <p>&copy; Copyright reserved 2025</p>
+        </footer>
+    </body>
+</html>
