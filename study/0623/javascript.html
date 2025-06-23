@@ -4,12 +4,38 @@
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>JavaScript</title>
-        <style></style>
+        <style>
+            .container {
+                display: grid;
+                grid-template-columns: 150px 150px 150px 150px;
+                grid-template-rows: 50px 50px;
+                grid-gap: 15px;
+            }
+            button {
+                width: 100%;
+                height: 50%;
+                object-fit: cover;
+            }
+        </style>
     </head>
     <body>
         <h1>JavaScript</h1>
+        
+            <div class="container">
 
-        <button onclick="alert('클릭했어요!')">눌러봐</button>
+            <button onclick="alert('아얏!')">눌러봐</button>
+
+            <button onclick="prompttest()">프롬프트 스타트</button>
+
+            <button onclick="third()">3의 배수</button>
+
+            <button onclick="switchtest()">switch문</button>
+
+            <button onclick="begintest()">연습문제1</button>
+
+            <button onclick="conditional()">조건문 연습</button>
+
+        </div>
     </body>
 </html>
 
