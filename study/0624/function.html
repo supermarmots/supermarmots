@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>함수 예제</title>
+        <style></style>
+    </head>
+    <body>
+        
+    </body>
+</html>
+
+<script>
+    function greet() {
+        alert("반가워");
+    }
+    greet();
+
+    function showName() {
+        let name = "윤찬우";
+        name = "빈캣님";
+        document.write(name);
+    }
+    showName();
+
+    document.write("<br><br>");
+
+    function add(a, b) {
+        return a + b;
+    }
+    let sum = add(3, 5);
+    document.write(sum);
+
+    document.write("<br><br>");
+
+    function calcBMI (weight, height) {
+        return weight / (height * height);
+    }
+    let bmi = calcBMI(92, 1.75);
+    document.write(bmi.toFixed(2));
+
+
+</script>
