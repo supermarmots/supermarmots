@@ -12,18 +12,17 @@
 </html>
 
 <script>
-    function printStars(s) {
-        
-        for(let i = 1; i<=s; i++) {
-            let stars = '*'.repeat(i);
-            console.log(stars);
-        } 
+    function printStars(n) {
+        for (let i = 1; i <= n; i++) {
+            console.log('*'.repeat(i));
+        }
     }
     printStars(3);
 
     function printRightStars(n) {
         for(let i = 1; i <= n; i++) {
             console.log(" ".repeat(n-i) + "*".repeat(i));
+            // console.log('*'.repeat(i).padStart(n));
         }
     }
     printRightStars(5);
@@ -33,6 +32,11 @@
             console.log(" ".repeat(n - i) + "*".repeat(i + j));
             j = j + 1;
         }
+
+        // for (let i = 1; i <= n; i++) {
+        //     const stars = '*'.repeat(2 * i - 1);
+        //     console.log(stars.padStart(n + i - 1));
+        // }
     }
     printPyramid(4);
 </script>
