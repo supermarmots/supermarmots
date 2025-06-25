@@ -9,13 +9,9 @@ function sol1() {
 map()
 
 function sol2() {
-    let arr = prompt("문자열 입력");
-
-    for(let i=0; i < arr.length; i++) {
-        if (arr[0]===arr[i]){
-            alert("앞뒤가 똑같네");
-        }
-    }
+    const input = prompt("문자열을 입력하세요:");
+    const reversed = input.split('').reverse().join('');
+    alert(input === reversed ? "회문입니다." : "회문이 아닙니다.");
 }
 
 
