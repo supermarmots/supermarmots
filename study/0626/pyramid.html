@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>피라미드 예제</title>
+        <style></style>
+    </head>
+    <body>
+        
+    </body>
+</html>
+
+<script>
+    function printInvertedPyramid(n) {
+        for(let i=n; i >= 1; i--) {
+            const stars = '*'.repeat(2 * i - 1);
+            console.log(stars.padStart(n + i -1));
+        }
+    }
+    printInvertedPyramid(4);
+</script>
