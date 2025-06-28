@@ -4,100 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cafe Menu</title>
-    <style>
-        body {
-            margin: 30px;
-            text-align: center;
-            background-color: #f4f4f4; /* 배경색을 살짝 추가하여 흰색 제목과 대비 */
-            font-family: Arial, Helvetica, sans-serif;
-        }
-
-        h1 {
-            color: #333;
-        }
-
-        /* 체크박스 숨기기 */
-        input[type="checkbox"] {
-            display: none;
-        }
-
-        /* 기본 라벨 스타일 */
-        label {
-            font-size: 20px;
-            cursor: pointer; /* 클릭 가능하다는 것을 알려주기 위해 커서 모양 변경 */
-            transition: all 0.3s; /* 부드러운 효과 */
-
-            /* Flexbox로 이름과 가격 정렬 */
-            display: flex;
-            justify-content: space-between;
-            padding: 5px 10px; /* 내부 여백 추가 */
-            border-radius: 5px; /* 모서리를 살짝 둥글게 */
-        }
-
-        /* 가격 스타일 */
-        .price {
-            font-weight: bold;
-            font-family: monospace; /* 숫자가 더 잘 보이도록 글꼴 변경 */
-        }
-
-        /* 체크박스가 선택되었을 때(checked) 라벨 스타일 변경 */
-        input[type="checkbox"]:checked + label {
-            color: yellow;
-            background-color: rgba(0, 0, 0, 0.2); /* 선택 시 배경색 살짝 추가 */
-        }
-
-        .container {
-            background-color: darkgreen;
-            color: white;
-            border: 10px solid rgb(74, 26, 26);
-            box-shadow: inset 0 0 10px black, 0 5px 15px rgba(0,0,0,0.3); /* 외부 그림자 추가 */
-            width: auto;
-            max-width: 1000px; /* 최대 너비 지정 */
-            margin: 0 auto; /* 중앙 정렬 */
-            height: auto; /* 내용에 맞게 높이 자동 조절 */
-            display: grid;
-            grid-template-columns: 1fr 1fr 1fr;
-            padding: 20px;
-            border-radius: 10px; /* 컨테이너 모서리 둥글게 */
-        }
-
-        .coffee, .beverage, .dessert {
-            text-align: left; /* 텍스트 왼쪽 정렬 */
-            display: flex;
-            flex-direction: column;
-            gap: 10px; /* 메뉴 아이템 사이의 간격 추가 */
-            padding: 0 15px; /* 좌우 여백 */
-        }
-        
-        .coffee h2, .beverage h2, .dessert h2 {
-            text-align: center;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.5); /* 밑줄 추가 */
-            padding-bottom: 10px;
-        }
-        
-        /* ============== 계산 결과 표시 영역 스타일 추가 ============== */
-        .calc {
-            grid-column: 1 / -1; /* 계산 영역을 그리드 전체 너비로 설정 */
-            margin-top: 20px;
-            padding-top: 20px;
-            border-top: 1px solid rgba(255, 255, 255, 0.5);
-            text-align: left;
-            font-size: 18px;
-        }
-
-        .calc h3 {
-            text-align: center;
-            margin-bottom: 15px;
-        }
-
-        .calc #total-price {
-            text-align: right;
-            font-size: 24px;
-            font-weight: bold;
-            margin-top: 15px;
-        }
-        /* ======================================================== */
-    </style>
+    <link rel="stylesheet" href="cafe.css"/>
 </head>
 <body>
     <h1>SUPER MARMOTS</h1>
@@ -149,50 +56,7 @@
         </div>
     </div>
 
-<script>
-    // 필요한 HTML 요소들을 미리 선택
-    const checkboxes = document.querySelectorAll('input[type="checkbox"]');
-    const selectedItemsDiv = document.getElementById('selected-items');
-    const totalPriceDiv = document.getElementById('total-price');
-
-    // 계산 및 표시 업데이트를 위한 함수
-    function calculateTotal() {
-        let totalPrice = 0;
-        let itemsHtml = '';
-
-        // 모든 체크박스를 확인
-        checkboxes.forEach(checkbox => {
-            // 만약 체크박스가 선택되었다면
-            if (checkbox.checked) {
-                // 총액에 가격(value)을 더함. 문자열이므로 숫자로 변환
-                totalPrice += parseInt(checkbox.value);
-                
-                // 선택된 메뉴 목록에 이름(name)을 추가
-                itemsHtml += `<p>${checkbox.name}</p>`;
-            }
-        });
-
-        // 선택된 메뉴가 하나도 없으면 "메뉴를 선택하세요" 메시지 표시
-        if (itemsHtml === '') {
-            itemsHtml = '<p style="text-align: center; opacity: 0.7;">메뉴를 선택하세요.</p>';
-        }
-
-        // 화면에 선택된 메뉴 목록을 업데이트
-        selectedItemsDiv.innerHTML = itemsHtml;
-        
-        // 화면에 총액을 업데이트. toLocaleString()으로 세 자리마다 콤마 추가
-        totalPriceDiv.innerText = `총 ${totalPrice.toLocaleString()} 원`;
-    }
-
-    // 모든 체크박스에 'change' 이벤트 리스너를 추가
-    // 체크박스의 상태가 바뀔 때마다 calculateTotal 함수가 실행됨
-    checkboxes.forEach(checkbox => {
-        checkbox.addEventListener('change', calculateTotal);
-    });
-
-    // 페이지가 처음 로드될 때 한 번 실행하여 초기 상태를 표시
-    calculateTotal();
-</script>
+<script src="cafe.js"></script>
 
 </body>
 </html>
