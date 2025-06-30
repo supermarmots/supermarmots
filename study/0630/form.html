@@ -58,6 +58,10 @@
         <button>제출</button>
     </form>
 
+    <br/>
+    <!-- 입력값 실시간 미리보기 -->
+    <input type="text" id="myInput" oninput="updatePreview()">
+    <div id="preview"></div>
     
   </body>
 </html>
@@ -150,5 +154,10 @@
             }
         });
 
+
+        function updatePreview() {
+            const inputValue = document.getElementById("myInput").value;
+            document.getElementById("preview").innerText = inputValue;
+        }
         
     </script>

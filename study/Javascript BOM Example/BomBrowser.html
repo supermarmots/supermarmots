@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>BOM 브라우저 정보</title>
+</head>
+<body>
+  <h2>📱 브라우저 정보</h2>
+  <ul id="info"></ul>
+
+  <script>
+    const info = document.getElementById("info");
+    const li = (text) => `<li>${text}</li>`;
+
+    info.innerHTML += li(`언어: ${navigator.language}`);
+    info.innerHTML += li(`브라우저: ${navigator.userAgent}`);
+    info.innerHTML += li(`화면 해상도: ${screen.width}x${screen.height}`);
+    
+    if ("geolocation" in navigator) {
+      navigator.geolocation.getCurrentPosition((position) => {
+        info.innerHTML += li(`위도 ${position.coords.latitude}`);
+        info.innerHTML += li(`경도: ${position.coords.longitude}`);
+
+      }, () => {
+        info.innerHTML += li("위치 정보를 가져올 수 없습니다.");
+      });
+    } else {
+      info.innerHTML += li("이 브라우저는 위치 정보를 지원하지 않습니다.");
+    }
+  </script>
+</body>
+</html>

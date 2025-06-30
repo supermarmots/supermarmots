@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>알람 타이머</title>
+        <style></style>
+    </head>
+    <body>
+        <input type="number" id="sec" placeholder="초 입력" />
+        <button onclick="setTimer()">시작</button>
+    </body>
+</html>
+
+<script>
+	function setTimer() {
+        const sec = document.getElementById("sec").value;
+        if (isNaN(sec) || sec <= 0) {
+            alert("올바른 시간을 입력하세요.");
+            return;
+        }
+        alert(`${sec}초 후 알림이 울립니다.`);
+        setTimeout(() => {
+            alert("시간이 되었습니다!");
+        }, sec * 1000);
+    }
+</script>
