@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title></title>
+        <style></style>
+    </head>
+    <body>
+    <!-- 연습문제 -->
+     <h2>회원가입 연습문제</h2>
+    <form id="signupEx">
+        <input type="text" id="user" placeholder="이름 입력"><br>
+        <input type="email" id="email" placeholder="이메일 입력"><br>
+        <input type="password" id="password" placeholder="비밀번호 입력"><br>
+        <button type="submit">가입</button>
+    </form>
+    </body>
+</html>
+
+<script>
+	// 회원가입 연습문제
+        document
+        .getElementById("signupEx")
+        .addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            const username = document.getElementById("user").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            
+            if (!user) {
+                alert("이름 입력해라.");
+                return;
+            }
+            
+            const emailRegex = /^[\w.-]+@[\w.-]+\.[A-Za-z]{2,}$/;
+            if (!emailRegex.test(email)) {
+                alert("이메일 똑바로 입력해라.");
+                return;
+            }
+
+            if (password.length < 8) {
+                alert("비밀번호는 8자 이상이어야 합니다.");
+                return;
+            }
+
+            alert("회원가입 축하!");
+        })
+</script>
