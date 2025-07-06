@@ -96,7 +96,6 @@ YAML (YAML Ain't Markup Language)은 사람이 읽기 쉽도록 설계된 데이
 > age: 30
 > city: 서울
 > skills:
-
     - Python
     - YAML
     - Linux
@@ -119,7 +118,7 @@ Hypertext Transfer Protocol Over Secure Socket Layer의 약자로, HTTP에 보�
 
 #### SSL 디지털 인증서
 
-클라이언트와 서버가느이 통신을 공인된 제3자(CA) 업체가 보증해주는 전자화된 문서
+클라이언트와 서버간의 통신을 공인된 제3자(CA) 업체가 보증해주는 전자화된 문서
 
 ##### SSL 인증서의 장점 및 역할
 
