@@ -37,11 +37,13 @@ showUser();
 
 async function load() {
   try {
-    const data = await fetch("http://example.com/data1");
+    const data = await fetch("http://example.com/data");
     const json = await data.json();
     console.log(json);
   } catch (err) {
     console.error("데이터 로딩 실패", err);
+    // retry 3 times
+    // return "john";
   }
 }
 load();
