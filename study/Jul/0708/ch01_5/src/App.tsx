@@ -1,17 +1,13 @@
-import * as D from "./data";
+import ClassComponent from "./ClassComponent";
+import ArrowComponent from "./ArrowComponent";
+import OnClick from "./pages/OnClick";
 
-import "./App.css";
-
-function App() {
+export default function App() {
   return (
-    <div>
-      <p>
-        {D.randomName()}, {D.randomJobTitle()}, {D.randomDayMonthYear()}
-      </p>
-      <img src={D.randomAvatar()} height="50" alt="호출 오류" />
-      <img src={D.randomImage()} height="300" alt="호출 오류" />
-    </div>
+    <ul>
+      <ClassComponent href="http://www.google.com" text="go to Google" />
+      <ArrowComponent href="https://www.instagram.com" text="go to instagram" />
+      <OnClick />
+    </ul>
   );
 }
-
-export default App;
