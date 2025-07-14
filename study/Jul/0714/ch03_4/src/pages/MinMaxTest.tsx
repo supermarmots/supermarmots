@@ -1,10 +1,19 @@
-import { Title } from "../components";
+import { Div, Title } from "../components";
+import * as D from "../data";
 
-export default function CopyMe() {
+export default function MinMaxTest() {
   return (
     <section className="mt-4">
-      <Title>CopyMe</Title>
-      <div className="m4-4"></div>
+      <Title>MinMaxTest</Title>
+      <Div className="p-4 bg-gray-300">
+        <Div src={D.randomImage(800, 300)} className="bg-cover">
+          <Div
+            className="w-1/2 bg-blue-500 h-80"
+            minWidth="300px"
+            maxWidth="500px"
+          />
+        </Div>
+      </Div>
     </section>
   );
 }
