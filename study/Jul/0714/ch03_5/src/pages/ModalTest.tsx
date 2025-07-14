@@ -1,10 +1,14 @@
 import {Title, Subtitle} from '../components'
 import {Modal, ModalContent, ModalAction, Button} from '../theme/daisyui'
 import * as D from '../data'
+import {useState} from 'react'
 
 export default function ModalTest() {
-  const open = true // 혹은 false
-  const closeClicked = () => alert('closeClicked')
+  const [open, setOpen] = useState(true) // 혹은 false
+  const closeClicked = () => {
+    alert('closeClicked')
+    setOpen(false)
+  }
   const acceptClicked = () => alert('acceptClicked')
 
   return (
