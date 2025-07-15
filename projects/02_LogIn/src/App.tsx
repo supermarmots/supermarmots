@@ -9,9 +9,16 @@ import { auth } from "./firebase";
 
 function App() {
   const userInfo = useContext(AuthContext);
+  const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [pwd, setPwd] = useState("");
   const [isCreate, setIsCreate] = useState(false);
+
+  // 사용자명 입력추가 메서드
+  const handleName = (e: React.ChangeEvent<HTMLInputElement>) => {
+    e.preventDefault();
+    setName(e.target.value);
+  };
 
   const handleEmail = (e: React.ChangeEvent<HTMLInputElement>) => {
     e.preventDefault();
@@ -65,13 +72,28 @@ function App() {
         </div>
       ) : (
         <form onSubmit={handleSubit}>
+          {/* 사용자명 입력칸 추가*/}
+          <input
+            type="text"
+            name="name"
+            onChange={handleName}
+            value={name}
+            placeholder="이름"
+          />
           <input
             type="email"
             name="email"
             onChange={handleEmail}
             value={email}
+            placeholder="이메일"
           />
-          <input type="password" name="pwd" onChange={handlePwd} value={pwd} />
+          <input
+            type="password"
+            name="pwd"
+            onChange={handlePwd}
+            value={pwd}
+            placeholder="비밀번호"
+          />
           <button type="submit"> {isCreate ? "만들기" : "로그인"}</button>
           <button type="button" onClick={handleClickCreate}>
             {isCreate ? "취소" : "회원가입"}
