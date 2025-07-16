@@ -1,6 +1,6 @@
 import {useState} from 'react'
-import {useClock} from './hooks'
-import Clock from './pages/Clock'
+// import {useClock} from './hooks'
+// import Clock from './pages/Clock'
 
 export default function App() {
   const [num1, setNum1] = useState(0)
