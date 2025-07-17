@@ -4,6 +4,10 @@
 
 > **웹 개발자**로 다양한 연령층이 어려움 없이 사용하는 UI / UX 를 개발합니다.
 
+## 소셜
+
+[![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=whobuythis)](https://velog.io/@whobuythis)
+
 ## 기술 스택
 
 ### 언어
