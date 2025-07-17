@@ -3,6 +3,8 @@ import "@fontsource/material-icons";
 import RefTest from "./pages/RefTest";
 import { UserProvider } from "./contexts/UserContext";
 import UserProfile from "./pages/UserProfile";
+import ThemeTest from "./pages/ThemeTest";
+
 function App() {
   return (
     <div className="App">
@@ -10,6 +12,7 @@ function App() {
       <UserProvider>
         <UserProfile />
       </UserProvider>
+      <ThemeTest />
     </div>
   );
 }
