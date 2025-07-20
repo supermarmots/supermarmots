@@ -4,8 +4,8 @@ import {
   signOut,
 } from "@firebase/auth";
 import React, { useContext, useState } from "react";
-import { AuthContext } from "./context/authContext";
-import { auth } from "./firebase";
+import { AuthContext } from "./context/AuthContext";
+import { auth } from "./firebase/firebase";
 
 function App() {
   const userInfo = useContext(AuthContext);

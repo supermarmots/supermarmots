@@ -1,7 +1,7 @@
 import { User } from "@firebase/auth";
 import { useEffect, useState } from "react";
-import { AuthContext } from "../context/authContext";
-import { auth } from "../firebase";
+import { AuthContext } from "../context/AuthContext";
+import { auth } from "../firebase/firebase";
 interface Props {
   children: React.ReactNode;
 }
