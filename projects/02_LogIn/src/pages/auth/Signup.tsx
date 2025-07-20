@@ -39,7 +39,7 @@ const Signup = () => {
 
       navigate("/user/profile"); // 회원가입 성공 시 프로필 페이지로 이동
     } catch (error) {
-      const customError = error as CustomError;
+      const customError = error as CustomError; // error any 타입 사용 지양을 위한 대체
       setError(customError.message);
     }
   };
