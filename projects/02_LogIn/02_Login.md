@@ -28,25 +28,36 @@
 
 ## ⚙️ 사용 기술 스택
 
-| 분류       | 기술명                  |
-| ---------- | ----------------------- |
-| 프론트엔드 | TypeScript, React       |
-| 백엔드     | Firebase Authentication |
-| 기타       | Vite, CSS Modules       |
+| 분류       | 기술명                                      |
+| ---------- | ------------------------------------------- |
+| 프론트엔드 | TypeScript, React                           |
+| 백엔드     | Firebase Authentication, FireStore DataBase |
+| 기타       | TailwindCSS                                 |
 
 ---
 
 ## 🧱 프로젝트 구조
 
 ```bash
-📁 프로젝트명/
+📁 02_Login/
 ├── public/           # 정적 파일
-├── src/
-│   ├── App.tsx       # 메인 컴포넌트
-│   ├── components/   # UI 컴포넌트 (LoginForm, ProtectedRoute 등)
-│   ├── services/     # firebase 인증 로직
-│   ├── assets/       # 이미지 및 스타일
-│   └── index.tsx
+├── /src
+|-- /assets            # 스크린샷 저장
+|-- /components        # 재사용 가능한 UI 컴포넌트 (예: Button, Input)
+|-- /context           # Context API를 사용하여 애플리케이션 전체에서 사용자 인증 상태를 쉽게 공유하고 관리
+|-- /firebase          # Firebase 설정 및 초기화
+|-- /hooks             # 커스텀 Hooks (예: useAuth)
+|-- /pages             # 라우팅될 페이지 컴포넌트
+|   |-- /auth
+|   |   |-- Login.tsx
+|   |   `-- Signup.tsx
+|   `-- /user
+|       `-- Profile.tsx
+|-- /routes            # 라우팅 설정
+|-- /styles            # 전역 스타일 및 PostCSS, Tailwind 설정
+|   |-- /index.css
+|-- App.tsx            # 메인 애플리케이션 컴포넌트
+|-- index.tsx          # 애플리케이션 진입점
 └── README.md
 ```
 
