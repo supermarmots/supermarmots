@@ -1,5 +1,6 @@
 import ExpensiveComponent from "../components/ExpensiveComponent";
 import Parent from "../components/Parent";
+import UseCallbackExample from "../components/UseCallbackExample";
 import UseMemoExample from "../components/UseMemoExample";
 export default function MemoTest() {
   return (
@@ -8,6 +9,7 @@ export default function MemoTest() {
       <ExpensiveComponent />
       <UseMemoExample />
       <Parent />
+      <UseCallbackExample />
     </div>
   );
 }
