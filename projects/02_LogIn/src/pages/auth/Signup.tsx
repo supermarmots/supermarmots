@@ -6,6 +6,14 @@ import { useNavigate } from "react-router-dom";
 import Input from "../../components/Input"; // Input 컴포넌트 import
 import Button from "../../components/Button"; // Button 컴포넌트 import
 
+class CustomError extends Error {
+  response?: {
+    data: unknown;
+    status: number;
+    headers: string;
+  };
+}
+
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -37,8 +45,9 @@ const Signup = () => {
       });
 
       navigate("/user/profile");
-    } catch (err: any) {
-      setError(err.message);
+    } catch (error) {
+      const customError = error as CustomError;
+      setError(customError.message);
     }
   };
 

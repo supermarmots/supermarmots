@@ -5,6 +5,14 @@ import { useNavigate, Link } from "react-router-dom";
 import Input from "../../components/Input";
 import Button from "../../components/Button";
 
+class CustomError extends Error {
+  response?: {
+    data: unknown;
+    status: number;
+    headers: string;
+  };
+}
+
 const Login = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
@@ -17,8 +25,9 @@ const Login = () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
       navigate("/user/profile");
-    } catch (err: any) {
-      setError(err.message);
+    } catch (error) {
+      const customError = error as CustomError;
+      setError(customError.message);
     }
   };
 
