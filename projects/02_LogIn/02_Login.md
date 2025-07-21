@@ -1,5 +1,3 @@
----
-
 # 📌 프로젝트명: Firebase Auth & React 로그인 데모
 
 > 이 프로젝트는 [React] 수업에서 진행된 Small Project입니다.  
@@ -92,16 +90,9 @@
 
 ## 🧠 회고 요약
 
-- 어려웠던 점: Firebase Auth 초기 세팅 및 에러 핸들링
-- 배운 점: 인증 흐름과 React 상태 관리의 연계
+- 어려웠던 점: 디렉토리 구조 설계와 이해
+- 배운 점: FireStore Database 초기 세팅 및 에러 핸들링
 - 개선하고 싶은 점: 소셜 로그인, UI 디자인 고도화
-
----
-
-## 📦 배포 주소 (선택)
-
-- Vercel / Netlify / AWS S3 등
-- `https://your-project.vercel.app`
 
 ---
 
