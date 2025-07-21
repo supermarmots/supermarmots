@@ -15,7 +15,7 @@ export default function UseCallbackExample() {
 
   const handleClick = useCallback(() => {
     setCount((prev) => prev + 1);
-  }, [count]);
+  }, []);
   return (
     <div style={{ padding: 20 }}>
       <h2>useCallback 예제</h2>
