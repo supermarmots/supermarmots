@@ -3,15 +3,8 @@ import { createUserWithEmailAndPassword } from "firebase/auth";
 import { doc, setDoc } from "firebase/firestore";
 import { auth, db } from "../../firebase/firebase";
 import { useNavigate } from "react-router-dom";
-
-// error any 타입 사용 지양을 위한 대체
-class CustomError extends Error {
-  response?: {
-    data: unknown;
-    status: number;
-    headers: string;
-  };
-}
+import Input from "../../components/Input"; // Input 컴포넌트 import
+import Button from "../../components/Button"; // Button 컴포넌트 import
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -22,6 +15,12 @@ const Signup = () => {
 
   const handleSignup = async (e: React.FormEvent) => {
     e.preventDefault();
+    if (password.length < 6) {
+      setError("Password should be at least 6 characters long.");
+      return;
+    }
+    setError("");
+
     try {
       const userCredential = await createUserWithEmailAndPassword(
         auth,
@@ -37,10 +36,9 @@ const Signup = () => {
         name: name,
       });
 
-      navigate("/user/profile"); // 회원가입 성공 시 프로필 페이지로 이동
-    } catch (error) {
-      const customError = error as CustomError; // error any 타입 사용 지양을 위한 대체
-      setError(customError.message);
+      navigate("/user/profile");
+    } catch (err: any) {
+      setError(err.message);
     }
   };
 
@@ -49,54 +47,37 @@ const Signup = () => {
       <div className="flex-col hero-content lg:flex-row-reverse">
         <div className="text-center lg:text-left">
           <h1 className="text-5xl font-bold">Sign up now!</h1>
+          <p className="py-6">Join us! Create an account to get started.</p>
         </div>
         <div className="w-full max-w-sm shadow-2xl card shrink-0 bg-base-100">
           <form className="card-body" onSubmit={handleSignup}>
-            {/* 이름 */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Name</span>
-              </label>
-              <input
-                type="text"
-                placeholder="name"
-                className="input input-borded"
-                value={name}
-                onChange={(e) => setName(e.target.value)}
-                required
-              />
-            </div>
-            {/* 이메일 */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Email</span>
-              </label>
-              <input
-                type="text"
-                placeholder="email"
-                className="input input-borded"
-                value={email}
-                onChange={(e) => setEmail(e.target.value)}
-                required
-              />
-            </div>
-            {/* 비밀번호 */}
-            <div className="form-control">
-              <label className="label">
-                <span className="label-text">Password</span>
-              </label>
-              <input
-                type="text"
-                placeholder="password"
-                className="input input-borded"
-                value={password}
-                onChange={(e) => setPassword(e.target.value)}
-                required
-              />
-            </div>
-            {error && <p className="text-red-500">{error}</p>}
-            <div className="mt-6 form-contorl">
-              <button className="btn btn-primary">Sign up</button>
+            <Input
+              label="Name"
+              type="text"
+              placeholder="name"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              required
+            />
+            <Input
+              label="Email"
+              type="email"
+              placeholder="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              required
+            />
+            <Input
+              label="Password"
+              type="password"
+              placeholder="password"
+              value={password}
+              onChange={(e) => setPassword(e.target.value)}
+              required
+            />
+            {error && <p className="mt-2 text-sm text-red-500">{error}</p>}
+            <div className="mt-6 form-control">
+              <Button type="submit">Sign up</Button>
             </div>
           </form>
         </div>
