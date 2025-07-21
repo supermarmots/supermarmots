@@ -32,7 +32,6 @@
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=whobuythis&layout=compact&theme=radical)
 
-![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=whobuythis&theme=radical)
 
 | 기술       | 수준     | 경험  |
 | ---------- | -------- | ----- |
