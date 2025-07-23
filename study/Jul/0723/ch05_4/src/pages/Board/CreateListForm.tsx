@@ -14,18 +14,17 @@ const CreateListForm: FC<CreateListFormProps> = ({onCreateList}) => {
   const addList = useCallback(() => {
     onCreateList(D.randomUUID(), value)
     setValue(() => D.randomTitleText())
-  }, [onCreateList, value])
+  }, [value, onCreateList])
 
   // prettier-ignore
   return (
     <div className="flex p-2">
-      <input placeholder="title" 
-        value={value} onChange={onChange} 
-        className="input-xs input-bordered input input-primary" />
-      <Icon name="add" onClick={addList} disabled={!value.length}
-        className="ml-2 btn-primary btn-xs tooltip" data-tip="카드 추가"/>
+      <input placeholder="title"
+        value={value} onChange={onChange}
+        className="input-xs input input-primary" />
+     <Icon name="add" onClick={addList} disabled={!value.length}
+      className="ml-2 btn-primary btn-xs" />
     </div>
   )
 }
-
 export default CreateListForm

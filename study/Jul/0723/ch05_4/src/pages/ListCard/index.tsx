@@ -4,7 +4,7 @@ import {CardDraggable} from '../../components'
 import {Div, Avatar} from '../../components'
 import {Icon} from '../../theme/daisyui'
 
-export type UserCardProps = {
+export type ListCardProps = {
   card: ICard
   onRemove?: () => void
   onClick?: () => void
@@ -12,17 +12,20 @@ export type UserCardProps = {
   index: number
 }
 
-const ListCard: FC<UserCardProps> = ({card, onRemove, onClick, draggableId, index}) => {
+const ListCard: FC<ListCardProps> = ({card, onRemove, onClick, draggableId, index}) => {
   const {image, writer} = card
   const {avatar, name, jobTitle} = writer
 
   return (
     <CardDraggable draggableId={draggableId} index={index}>
-      <Div className="m-2 border shadow-lg rounded-xl" width="10rem" onClick={onClick}>
+      <Div
+        className="m-2 overflow-hidden border shadow-lg rounded-xl"
+        width="10rem"
+        onClick={onClick}>
         <Div src={image} className="relative h-20">
           <Icon
             name="remove"
-            className="absolute right-1 btn-primary btn-xs"
+            className="absolute right-1 top-1 btn-primary btn-xs"
             onClick={onRemove}
           />
         </Div>
