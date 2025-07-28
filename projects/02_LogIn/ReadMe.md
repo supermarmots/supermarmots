@@ -78,11 +78,11 @@
 
 ## 🖼️ 데모 화면
 
-| 주요 화면   | 캡처 예시                            |
-| ----------- | ------------------------------------ |
-| 로그인      | ![login](./assets/login.png)         |
-| 회원가입    | ![signup](./assets/signup.png)       |
-| 인증 페이지 | ![protected](./assets/protected.png) |
+| 주요 화면   | 캡처 예시                                 |
+| ----------- | ----------------------------------------- |
+| 로그인      | ![login](./assets/login_screen.png)       |
+| 회원가입    | ![signup](./assets/signup_screen.png)     |
+| 인증 페이지 | ![protected](./assets/profile_screen.png) |
 
 ---
 
