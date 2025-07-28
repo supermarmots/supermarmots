@@ -8,7 +8,7 @@ export const testRouter = (...args: any[]) => {
     })
     .get("/:id", (req, res) => {
       const { id } = req.params;
-      res.json({ ok: true });
+      res.json({ ok: true, id });
     })
     .post("/", (req, res) => {
       const { body } = req;
