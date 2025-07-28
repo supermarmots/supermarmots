@@ -49,8 +49,11 @@ Hi there, I'm ChanWoo Yun
 
 # 📞 Contact
 
-[![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:chanwo25@gmail.com)](mailto:chanwo25@gmail.com)
-[![Naver Badge](https://img.shields.io/badge/Naver-03C75A?style=flat-square&logo=Naver&logoColor=white&link=mailto:yunchanwo@naver.com)](mailto:yunchanwo@naver.com)
+![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:chanwo25@gmail.com)
+chanwo25@gmail.com
+
+![Naver Badge](https://img.shields.io/badge/Naver-03C75A?style=flat-square&logo=Naver&logoColor=white&link=mailto:yunchanwo@naver.com)
+yunchanwo@naver.com
 
 # 📊 GitHub Status
 
