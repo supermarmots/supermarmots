@@ -4,6 +4,14 @@
 
 > **웹 개발자**로 다양한 연령층이 어려움 없이 사용하는 UI / UX 를 개발합니다.
 
+## 미니프로젝트
+
+[다용도 계산기](https://github.com/whobuythis/React_Calculator)
+
+[카페 메뉴판 & 계산기](https://github.com/whobuythis/whobuythis/tree/main/projects/01_cafe)
+
+[React & Firebase 로그인](https://github.com/whobuythis/whobuythis/tree/main/projects/02_LogIn)
+
 ## 소셜
 
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=whobuythis)](https://velog.io/@whobuythis)
@@ -31,7 +39,6 @@
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=whobuythis&show_icons=true&theme=radical)
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=whobuythis&layout=compact&theme=radical)
-
 
 | 기술       | 수준     | 경험  |
 | ---------- | -------- | ----- |
