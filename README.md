@@ -1,10 +1,18 @@
-## 안녕하세요 👋
+<div align="center">
 
-### My name is 윤찬우.
+![header](https://capsule-render.vercel.app/api?type=venom&color=auto&height=300&section=header&text=Welcome-nl-SuperMarmot&fontSize=70)
+
+<h1>
+<img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" /> 
+Hi there, I'm ChanWoo Yun 
+<img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" /> 
+</h1 >
 
 > **웹 개발자**로 다양한 연령층이 어려움 없이 사용하는 UI / UX 를 개발합니다.
 
-## 미니프로젝트
+# 🔗 Project.log
+
+<h2>
 
 [다용도 계산기](https://github.com/whobuythis/React_Calculator)
 
@@ -12,11 +20,13 @@
 
 [React & Firebase 로그인](https://github.com/whobuythis/whobuythis/tree/main/projects/02_LogIn)
 
-## 소셜
+</h2>
+
+# 📃 Tech Report
 
 [![Velog's GitHub stats](https://velog-readme-stats.vercel.app/api?name=whobuythis)](https://velog.io/@whobuythis)
 
-## 기술 스택
+# 🔧 Tech
 
 ### 언어
 
@@ -37,15 +47,15 @@
 ![MySQL](https://img.shields.io/badge/mysql-4479A1.svg?style=for-the-badge&logo=mysql&logoColor=white)
 ![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&logo=mongodb&logoColor=white)
 
-## 📊 GitHub 통계
+# 📞 Contact
+
+[![Gmail Badge](https://img.shields.io/badge/Gmail-d14836?style=flat-square&logo=Gmail&logoColor=white&link=mailto:chanwo25@gmail.com)](mailto:chanwo25@gmail.com)
+[![Naver Badge](https://img.shields.io/badge/Naver-03C75A?style=flat-square&logo=Naver&logoColor=white&link=mailto:yunchanwo@naver.com)](mailto:yunchanwo@naver.com)
+
+# 📊 GitHub Status
 
 ![GitHub Stats](https://github-readme-stats.vercel.app/api?username=whobuythis&show_icons=true&theme=radical)
 
 ![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=whobuythis&layout=compact&theme=radical)
 
-| 기술       | 수준     | 경험  |
-| ---------- | -------- | ----- |
-| JavaScript | ⭐⭐⭐⭐ | 3년   |
-| TypeScript | ⭐⭐     | 3개월 |
-| React      | ⭐⭐⭐⭐ | 2년   |
-| Vue        | ⭐⭐     | 3개월 |
+</div>
