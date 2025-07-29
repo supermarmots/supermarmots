@@ -8,7 +8,7 @@ import { connectAndUseDB } from "./mongodb";
 makeDir(getPublicDirPath());
 
 const connectCallback = (db: MongoDB) => {
-  const hostname = "localhost",
+  const hostname = "localhost", // 0.0.0.0으로도 수정 시에 정상 동작!
     port = 4000;
 
   createServer(createExpressApp(db)).listen(port, () =>
