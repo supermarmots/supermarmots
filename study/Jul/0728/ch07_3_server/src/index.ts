@@ -16,4 +16,6 @@ const connectCallback = (db: MongoDB) => {
   );
 };
 
-connectAndUseDB(connectCallback, "ch07", "mongodb://192.168.0.20:27017");
+connectAndUseDB(connectCallback, "ch07", "mongodb://localhost:27017");
+// mongodb://192.168.0.20:27017 (공유기 ip 주소)
+// => mongodb://localhost:27017 로 수정 (내부 운영체제 로컬 주소)
