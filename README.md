@@ -1,8 +1,8 @@
 <div style="text-align: center">
 
-![header](https://capsule-render.vercel.app/api?type=venom&color=auto&height=300&section=header&text=Welcome-nl-SuperMarmot&fontSize=70)
+![header](https://capsule-render.vercel.app/api?type=venom&color=auto&height=300&section=header&text=Welcome-nl-SuperMarmot.log&fontSize=70)
 
-<h1>
+<h1 style="display: flex; justify-content: center">
 
 <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" />
 
@@ -10,13 +10,15 @@ Hi there, I'm ChanWoo Yun
 
 <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" />
 
-</h1 >
+</h1>
 
 > **웹 개발자**로 다양한 연령층이 어려움 없이 사용하는 UI / UX 를 개발합니다.
 
 # 🔗 Project.log
 
 <h2>
+
+[BamBoo 게시판](https://bamboo-3658e.web.app/)
 
 [다용도 계산기](https://github.com/whobuythis/React_Calculator)
 
