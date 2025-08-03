@@ -2,15 +2,9 @@
 
 ![header](https://capsule-render.vercel.app/api?type=venom&color=auto&height=300&section=header&text=Welcome-nl-SuperMarmot.log&fontSize=70)
 
-<h1>
-
 <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" />
 
-Hi there, I'm ChanWoo Yun
-
-<img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" />
-
-</h1>
+# Hi there, I'm ChanWoo Yun
 
 > **웹 개발자**로 다양한 연령층이 어려움 없이 사용하는 UI / UX 를 개발합니다.
 
