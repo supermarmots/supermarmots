@@ -1,8 +1,8 @@
-<div style="text-align: center">
+<div align="center">
 
 ![header](https://capsule-render.vercel.app/api?type=venom&color=auto&height=300&section=header&text=Welcome-nl-SuperMarmot.log&fontSize=70)
 
-<h1 style="display: flex; justify-content: center">
+<h1>
 
 <img src="https://techstack-generator.vercel.app/react-icon.svg" alt="icon" width="65" height="65" />
 
