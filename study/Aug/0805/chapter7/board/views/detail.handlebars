@@ -12,14 +12,14 @@
     {{hits}}
     | 작성일시 :
     {{dateString createdDt}}
-
+    <button onclick="likePost()">좋아요♥</button>
+    <span id="like-count">{{likes}}</span>
     <button onclick="modifyPost()">수정</button>
     <button onclick="deletePost()">삭제</button>
   </div>
 
   <div>
     <pre>{{content}}</pre>
-
   </div>
 
   <section>
@@ -80,7 +80,24 @@
       'Content-Type': 'application/json',
     },
   }
-
+  
+  // 좋아요 기능 구현
+  async function likePost() {
+    const result = await fetch(`/like/{{post._id}}`, {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      }
+    });
+    const data = await result.json();
+    if (data.isSuccess) {
+      // 새로고침 없이 좋아요 수 증가
+      const likeCount = document.getElementById('like-count');
+      likeCount.textContent = Number(likeCount.textContent || 0) + 1;
+    } else {
+      alert("좋아요 처리에 실패했습니다.");
+    }
+  }
   async function modifyPost() {
     const password = prompt("패스워드를 입력해주세요");
     if (!password) {

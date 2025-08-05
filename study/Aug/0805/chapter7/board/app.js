@@ -47,6 +47,18 @@ app.get("/detail/:id", async (req, res) => {
   });
 });
 
+// 좋아요 기능 구현
+app.post("/like/:id", async (req, res) => {
+  try {
+    await postService.getLikePost(collection, req.params.id);
+    return res.json({ isSuccess: true })
+  } catch (error) {
+    console.error(error);
+    return res.json({ isSuccess: false });
+  }
+})
+
+
 app.post("/check-password", async (req, res) => {
   const { id, password } = req.body;
 

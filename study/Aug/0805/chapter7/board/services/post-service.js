@@ -36,6 +36,14 @@ async function getDetailPost(collection, id) {
   );
 }
 
+// 좋아요 기능 구현
+async function getLikePost(collection, id) {
+  return await collection.updateOne(
+    { _id: ObjectId(id) },
+    { $inc: { likes: 1 } }
+  );
+}
+
 async function getPostByIdAndPassword(collection, { id, password }) {
   return await collection.findOne(
     { _id: ObjectId(id), password: password },
@@ -63,4 +71,5 @@ module.exports = {
   getPostById,
   getPostByIdAndPassword,
   updatePost,
+  getLikePost,
 };
