@@ -1,6 +1,6 @@
 const { MongoClient, ServerApiVersion } = require("mongodb");
-const url =
-  "mongodb+srv://yun:chanwo0205@cluster0.b3pcsc6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+require("dotenv").config({ path: __dirname + "/.env" });
+const url = process.env.MONGO_URI;
 
 const client = new MongoClient(url, { useNewUrlParser: true });
 
