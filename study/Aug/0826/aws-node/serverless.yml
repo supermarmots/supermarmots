@@ -1,0 +1,21 @@
+# "org" ensures this Service is used with the correct Serverless Framework Access Key.
+org: supermarmot
+# "app" enables Serverless Framework Dashboard features and sharing them with other Services.
+app: aws-node
+# "service" is the name of this project. This will also be added to your AWS resource names.
+service: aws-node
+
+provider:
+  name: aws
+  runtime: nodejs20.x
+  # Specify the AWS region for your service.
+  region: ap-northeast-2
+  # Add the deploymentBucket property to specify an S3 bucket for your artifacts.
+  # This avoids the default behavior of creating/looking up a shared bucket via SSM,
+  # which is causing the permission error.
+  deploymentBucket:
+    name: tmd-genai1-students13 # <-- Important: Replace with a unique S3 bucket name you can access
+
+functions:
+  hello:
+    handler: handler.hello
