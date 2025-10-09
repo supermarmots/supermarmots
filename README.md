@@ -12,19 +12,19 @@ Hi there, I'm ChanWoo Yun
 
 </h1>
 
-### **웹 개발자**로 다양한 연령층이 어려움 없이 사용하는 UI / UX 를 개발합니다.
-
 # 🔗 Project.log
 
 <h2>
 
+[Zerogram](https://zero-gram.link)
+
 [BamBoo 게시판](https://bamboo-3658e.web.app/)
 
-[다용도 계산기](https://github.com/whobuythis/React_Calculator)
+[다용도 계산기](https://github.com/supermarmots/React_Calculator)
 
-[카페 메뉴판 & 계산기](https://github.com/whobuythis/whobuythis/tree/main/projects/01_cafe)
+[카페 메뉴판 & 계산기](https://github.com/supermarmots/supermarmots/tree/main/projects/01_cafe)
 
-[React & Firebase 로그인](https://github.com/whobuythis/whobuythis/tree/main/projects/02_LogIn)
+[React & Firebase 로그인](https://github.com/supermarmots/supermarmots/tree/main/projects/02_LogIn)
 
 </h2>
 
@@ -63,8 +63,8 @@ yunchanwo@naver.com
 
 # 📊 GitHub Status
 
-![GitHub Stats](https://github-readme-stats.vercel.app/api?username=whobuythis&show_icons=true&theme=radical)
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=supermarmots&show_icons=true&theme=radical)
 
-![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=whobuythis&layout=compact&theme=radical)
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=supermarmots&layout=compact&theme=radical)
 
 </div>
