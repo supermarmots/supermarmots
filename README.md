@@ -16,7 +16,7 @@ Hi there, I'm ChanWoo Yun
 
 <h2>
 
-[Zerogram](https://zero-gram.link)
+[Zerogram](https://github.com/supermarmots/Zerogram_FE)
 
 [BamBoo 게시판](https://bamboo-3658e.web.app/)
 
@@ -37,7 +37,6 @@ Hi there, I'm ChanWoo Yun
 ### 언어
 
 ![JavaScript](https://img.shields.io/badge/javascript-%23323330.svg?style=for-the-badge&logo=javascript&logoColor=%23F7DF1E)
-![Java](https://img.shields.io/badge/java-%23ED8B00.svg?style=for-the-badge&logo=openjdk&logoColor=white)
 ![TypeScript](https://img.shields.io/badge/typescript-%23007ACC.svg?style=for-the-badge&logo=typescript&logoColor=white)
 
 ### 프레임워크
